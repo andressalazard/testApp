@@ -1,18 +1,17 @@
 import { GetStaticProps } from "next";
 import Layout from "../components/Layout/Layout";
-import PostTable from "../components/PostsTable/PostTable";
+import TeamDashboard from "../components/TeamDashboard/TeamDashboard";
 import styles from "../styles/Home.module.css";
-import { GetPostsResults } from "../types";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { PostContext } from "../contexts/PostContext";
+import { UserContext } from "../contexts/PostContext";
 
 export default function Home({ users }) {
   console.log(`Got ${users.length} posts!`);
   return (
     <Layout>
-      <PostContext.Provider value={users}>
-        <PostTable></PostTable>
-      </PostContext.Provider>
+      <UserContext.Provider value={users}>
+        <TeamDashboard></TeamDashboard>
+      </UserContext.Provider>
     </Layout>
   );
 }

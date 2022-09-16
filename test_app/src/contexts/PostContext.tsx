@@ -1,4 +1,3 @@
 import { createContext } from "react";
-import { Post } from "../types";
 
-export const PostContext = createContext([]);
+export const UserContext = createContext([]);
