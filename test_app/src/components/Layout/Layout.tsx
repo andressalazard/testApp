@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import styles from "./Layout.module.css";
+import { PostContext } from "../../contexts/PostContext";
 
 function Layout({ children, title = "Test App" }) {
   return (
